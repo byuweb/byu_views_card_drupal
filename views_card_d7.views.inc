@@ -18,7 +18,7 @@ function views_card_d7_views_plugins() {
         'uses row plugin' => TRUE,
         'uses row class' => FALSE,
         'uses options' => TRUE,
-        'uses grouping' => TRUE,
+        'uses grouping' => FALSE,
         'type' => 'normal',
       ),
     ),
