@@ -5,7 +5,7 @@ package = BYU Custom
 
 dependencies[] = views
 
-stylesheets[all][] = css/views_byu_card.css
+stylesheets[all][] = css/style.css
 
 files[] = views_card_d7_plugin_style_byu_card.inc
 

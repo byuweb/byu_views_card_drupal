@@ -15,7 +15,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
    */
   function option_definition() {
     $options = parent::option_definition();
-    $options['columns'] = array('default' => '4');
+    $options['columns'] = array('default' => '3');
 
     return $options;
   }
