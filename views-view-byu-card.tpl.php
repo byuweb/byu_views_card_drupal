@@ -17,7 +17,7 @@
 
 <div class="card-container" >
     <?php foreach ($rows as $id => $row): ?>
-        <byu-card style="width: 30%" class="<?php print $classes[$id]; ?>""><?php print $row; ?></byu-card>
+        <byu-card style="width: 30%" class="<?php print $classes; ?>""><?php print $row; ?></byu-card>
     <?php endforeach; ?>
 
 </div>

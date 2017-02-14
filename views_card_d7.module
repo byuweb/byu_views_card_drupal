@@ -44,5 +44,5 @@ function template_preprocess_views_view_byu_card(&$vars) {
 //  $vars['classes_array'] = array_filter($vars['classes_array']);
 //  $vars['columns'] = $columns;
 
-  $vars['classes'] = 'test columns-3';
+  $vars['classes'] .= ' test columns-3';
 }
