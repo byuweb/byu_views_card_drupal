@@ -45,13 +45,12 @@ function template_preprocess_views_view_byu_card(&$vars) {
 //  $vars['columns'] = $columns;
 //  $vars['card_width'] = !empty($vars['classes_array']) ? implode(' ', $vars['classes_array']) : '';
   if (!empty($vars['rows'])) {
-    $length = length($vars['rows']);
+
     $vars['card_width'] = array();
-    for($i = 0; $i < $length; $i++) {
+    foreach ($vars['rows'] as $i => $row) {
       $vars['card_width'][$i] = 'columns-3';
 
     }
-
 
   }
 //  $vars['card_width'] = 'hi';
