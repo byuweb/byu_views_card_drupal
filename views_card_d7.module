@@ -43,6 +43,17 @@ function template_preprocess_views_view_byu_card(&$vars) {
 //
 //  $vars['classes_array'] = array_filter($vars['classes_array']);
 //  $vars['columns'] = $columns;
+//  $vars['card_width'] = !empty($vars['classes_array']) ? implode(' ', $vars['classes_array']) : '';
+  if (!empty($vars['rows'])) {
+    $length = length($vars['rows']);
+    $vars['card_width'] = array();
+    for($i = 0; $i < $length; $i++) {
+      $vars['card_width'][$i] = 'columns-3';
 
-  $vars['classes'] .= ' test columns-3';
+    }
+
+
+  }
+//  $vars['card_width'] = 'hi';
+//  $vars['classes'] .= ' test columns-3';
 }
