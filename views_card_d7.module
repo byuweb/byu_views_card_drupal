@@ -48,11 +48,11 @@ function template_preprocess_views_view_byu_card(&$vars) {
 
     $vars['card_width'] = array();
     foreach ($vars['rows'] as $i => $row) {
-      $vars['card_width'][$i] = 'columns-3';
+      $widthClass = 'columns-' . $columns;
+      $vars['card_width'][$i] = $widthClass;
 
     }
 
   }
-//  $vars['card_width'] = 'hi';
-//  $vars['classes'] .= ' test columns-3';
+
 }
