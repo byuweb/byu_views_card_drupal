@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_plugins().
  */
-function views_byu_card_views_plugins() {
+function views_card_d7_views_plugins() {
   return array(
     'style' => array(
       'byu_card' => array(
