@@ -3,6 +3,12 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-byu-card {
+byu-card.columns-2 {
+    width: 45%;
+}
+byu-card.columns-3 {
     width: 30%;
+}
+byu-card.columns-4 {
+    width: 23%;
 }
