@@ -24,7 +24,11 @@ INSTALLATION
 
 1. Download module and copy views_responsive_grid folder to sites/all/modules
 
-2. Enable Views and Views Responsive Grid modules.
+2. Enable Views and Views BYU Card modules.
+
+3. Set view display format to 'BYU Card'.
+
+4. In Fields settings, uncheck 'Provide default field wrapper elements' checkbox.
 
 
 HOW TO USE
