@@ -7,7 +7,7 @@ dependencies[] = views
 
 stylesheets[all][] = css/views_byu_card.css
 
-files[] = views_byu_card_plugin_style_byu_card.inc
+files[] = views_card_s7_plugin_style_byu_card.inc
 
 ; Information added by drupal.org packaging script on 2013-04-05
 version = "7.x-1.3"
