@@ -32,27 +32,18 @@ function views_card_d7_get_options($array) {
  */
 function template_preprocess_views_view_byu_card(&$vars) {
   $view = $vars['view'];
-  $result = $view->result;
+//  $result = $view->result;
   $options = views_card_d7_get_options($view->style_plugin->options);
-  $handler = $view->style_plugin;
+//  $handler = $view->style_plugin;
   $columns  = $options['columns'];
-//  $vars['classes_array'] = array();
-//    $vars['classes_array'][] = 'views-byu-card';
-//    $vars['classes_array'][] = 'views-columns-' . $columns;
-//
-//
-//  $vars['classes_array'] = array_filter($vars['classes_array']);
-//  $vars['columns'] = $columns;
-//  $vars['card_width'] = !empty($vars['classes_array']) ? implode(' ', $vars['classes_array']) : '';
+
   if (!empty($vars['rows'])) {
 
     $vars['card_width'] = array();
     foreach ($vars['rows'] as $i => $row) {
       $widthClass = 'columns-' . $columns;
       $vars['card_width'][$i] = $widthClass;
-
+      $vars['cols'][$i] = $columns;
     }
-
   }
-
 }
