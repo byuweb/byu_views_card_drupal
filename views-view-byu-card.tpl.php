@@ -15,9 +15,9 @@
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
 
-<div class="card-container" class="<?php print $classes; ?>">
+<div class="card-container" >
     <?php foreach ($rows as $id => $row): ?>
-        <byu-card><?php print $row; ?></byu-card>
+        <byu-card style="width: 30%" class="<?php print $row['classes']; ?>"><?php print $row; ?></byu-card>
     <?php endforeach; ?>
 
 </div>
