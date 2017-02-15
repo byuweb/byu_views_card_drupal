@@ -48,8 +48,3 @@ function template_preprocess_views_view_byu_card(&$vars) {
     }
   }
 }
-
-function views_card_d7_init(){
-//    drupal_add_js('https://cdn.byu.edu/byu-card/unstable/my-component.js', 'external');
-
-}
