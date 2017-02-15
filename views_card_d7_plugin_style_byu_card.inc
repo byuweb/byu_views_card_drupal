@@ -38,7 +38,6 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
           2 => t('2'),
           3 => t('3'),
           4 => t('4'),
-          5 => t('5'),
       ),
   );
 
