@@ -17,6 +17,7 @@
 
 <div class="card-container <?php print $card_width[$id]; ?>" >
     <?php foreach ($rows as $id => $row): ?>
+        <byu-card columns="<?php print $cols[$id]; ?>"><?php print $row; ?></byu-card>
     <?php endforeach; ?>
 
 </div>
