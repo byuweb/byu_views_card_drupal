@@ -3,12 +3,39 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-byu-card.columns-2 {
+.card-container.columns-2 {
+    display: flex;
+}
+.card-container.columns-2  byu-card{
     width: 45%;
 }
-byu-card.columns-3 {
+
+.card-container.columns-3 {
+    display: flex;
+}
+.card-container.columns-3 byu-card {
     width: 30%;
 }
-byu-card.columns-4 {
+@media screen and (max-width: 1023px) {
+    .card-container.columns-3 byu-card {
+        width: 45%;
+    }
+}
+.card-container.columns-4 {
+    display: flex;
+}
+.card-container.columns-4 byu-card{
     width: 23%;
+}
+@media screen and (max-width: 1023px) {
+    .card-container.columns-4 byu-card {
+        width: 30%;
+    }
+}
+
+/* for small mobile, always be 100% */
+@media screen and (max-width: 767px) {
+    .card-container byu-card {
+        width: 80% !important;
+    }
 }
