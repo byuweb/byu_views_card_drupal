@@ -9,38 +9,32 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-Current Maintainer: Ian Whitcomb - http://drupal.org/user/771654
+Current Maintainer: Katria Lesser, BYU Drupal Users Group
 
-Views Responsive Grid provides a views plugin for displaying content in a
-responsive(mobile friendly) grid layout. Rather than trying to force the
-standard Views grid display to work for mobile this provides the same
-functionality, but in DIVs instead of tables. Provided is also the ability to
-specify a horizontal or vertical grid layout which will properly stack the
-content on a mobile display.
+Views BYU Card module uses the styling of the
+web componenet BYU-card to display nice cards in views.
+You can see the byu-card project in github as well:
+https://github.com/byuweb/byu-card
 
 
 INSTALLATION
 ------------
 
-1. Download module and copy views_responsive_grid folder to sites/all/modules
+1. Git clone or Download this module, placing views_card_d7 folder to sites/all/modules
 
 2. Enable Views and Views BYU Card modules.
 
-3. Set view display format to 'BYU Card'.
+3. When editing the view you'd like to use byu card with,
+Change the view display type (i.e. Unformatted List) to 'BYU Card'.
 
-4. In Fields settings, uncheck 'Provide default field wrapper elements' checkbox.
+4. While still editing that view, under Fields settings,
+uncheck 'Provide default field wrapper elements' checkbox.
+
+5. Save the view.
 
 
 HOW TO USE
 ------------
 
-After enabling the module, create a new view with the responsive grid display
-format. Specify the number of columns, and the alignment of the grid.
-
-You'll need to understand that the the module won't provide any default styling
-to the grid so you may think it's not working, this is by design. In order for
-the columns to work you'll need to specify the class name of your columns. For
-example, if your theme utilizes a grid, like Twitter Bootstrap does, you would
-specify "span3" as the column class(making sure to use the correct span size).
-This will make sure your column adhere to the grid in your Bootstrap based
-theme.
+After enabling the module, create a new view with the BYU Card display
+format.
