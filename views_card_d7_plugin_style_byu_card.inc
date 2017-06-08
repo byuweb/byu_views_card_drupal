@@ -31,13 +31,25 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
 
     $form['columns'] = array(
       '#type' => 'select',
-      '#title' => t('Number of tiles in each row - not utilized right now'),
+      '#title' => t('Number of tiles in each row'),
       '#default_value' => $options['columns'],
       '#required' => TRUE,
       '#options' => array(
+          default => t('Default'),
           2 => t('2'),
           3 => t('3'),
           4 => t('4'),
+      ),
+  );
+   $form['alignment'] = array(
+      '#type' => 'select',
+      '#title' => t('Tile Alignment'),
+      '#default_value' => $options['alignment'],
+      '#required' => TRUE,
+      '#options' => array(
+          "center" => t('Center'),
+          "left" => t('Left'),
+
       ),
   );
 
