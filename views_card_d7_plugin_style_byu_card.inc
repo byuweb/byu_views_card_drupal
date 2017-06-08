@@ -41,6 +41,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
           4 => t('4'),
       ),
   );
+    
    $form['alignment'] = array(
       '#type' => 'select',
       '#title' => t('Tile Alignment'),
@@ -49,9 +50,32 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
       '#options' => array(
           "center" => t('Center'),
           "left" => t('Left'),
-
       ),
   );
+    
+     $form['border'] = array(
+      '#type' => 'select',
+      '#title' => t('Border'),
+      '#default_value' => $options['border'],
+      '#required' => TRUE,
+      '#options' => array(
+          "none" => t('None'),        
+          "gray" => t('Gray'),
+          "navy" => t('Navy'),
+      ),
+    );
+    
+     $form['border_radius'] = array(
+      '#type' => 'select',
+      '#title' => t('Border Radius'),
+      '#default_value' => $options['border_radius'],
+      '#required' => TRUE,
+      '#options' => array(
+          "none" => t('None'),        
+          "small" => t('Small'),
+          "large" => t('Large'),
+      ),
+    );
 
   }
 }
