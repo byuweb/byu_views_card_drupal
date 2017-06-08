@@ -44,7 +44,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
     
    $form['alignment'] = array(
       '#type' => 'select',
-      '#title' => t('Tile Alignment'),
+      '#title' => t('Tile Alignment - coming soon'),
       '#default_value' => $options['alignment'],
       '#required' => FALSE,
       '#options' => array(
@@ -55,7 +55,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
     
      $form['border'] = array(
       '#type' => 'select',
-      '#title' => t('Border'),
+      '#title' => t('Border - coming soon'),
 //      '#default_value' => $options['border'],
       '#required' => FALSE,
       '#options' => array(
@@ -67,7 +67,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
     
      $form['border_radius'] = array(
       '#type' => 'select',
-      '#title' => t('Border Radius'),
+      '#title' => t('Border Radius - coming soon'),
 //      '#default_value' => $options['none'],
       '#required' => FALSE,
       '#options' => array(
