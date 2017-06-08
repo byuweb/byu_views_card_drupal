@@ -35,7 +35,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
       '#default_value' => $options['columns'],
       '#required' => TRUE,
       '#options' => array(
-          default => t('Default'),
+          "default" => t('Default'),
           2 => t('2'),
           3 => t('3'),
           4 => t('4'),
