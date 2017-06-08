@@ -29,13 +29,13 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
     // Flatten options to deal with the various hierarchy changes.
     $options = views_card_d7_get_options($this->options);
 
-    $form['columns'] = array(
+       $form['columns'] = array(
       '#type' => 'select',
       '#title' => t('Number of tiles in each row'),
       '#default_value' => $options['columns'],
       '#required' => TRUE,
       '#options' => array(
-          "default" => t('Default'),
+//          "default" => t('Default'),
           2 => t('2'),
           3 => t('3'),
           4 => t('4'),
@@ -46,7 +46,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
       '#type' => 'select',
       '#title' => t('Tile Alignment'),
       '#default_value' => $options['alignment'],
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#options' => array(
           "center" => t('Center'),
           "left" => t('Left'),
@@ -56,8 +56,8 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
      $form['border'] = array(
       '#type' => 'select',
       '#title' => t('Border'),
-      '#default_value' => $options['border'],
-      '#required' => TRUE,
+//      '#default_value' => $options['border'],
+      '#required' => FALSE,
       '#options' => array(
           "none" => t('None'),        
           "gray" => t('Gray'),
@@ -68,8 +68,8 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
      $form['border_radius'] = array(
       '#type' => 'select',
       '#title' => t('Border Radius'),
-      '#default_value' => $options['border_radius'],
-      '#required' => TRUE,
+//      '#default_value' => $options['none'],
+      '#required' => FALSE,
       '#options' => array(
           "none" => t('None'),        
           "small" => t('Small'),
