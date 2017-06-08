@@ -3,11 +3,27 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.card-container.left {
+    justify-content: flex-start;
+    
+}
+/* defaults to 3 */
+.card-container.left byu-card,
+.card-container.left.columns-3 byu-card {
+    margin: 15px 1.65%;   
+}
+.card-container.left.columns-2 byu-card {
+    margin: 15px 2%;   
+}
+
+.card-container.left.columns-4 byu-card {
+    margin: 15px 1.5%;   
+}
 .card-container.columns-2 {
     display: flex;
 }
 .card-container.columns-2  byu-card{
-    width: 45%;
+    width: 46%;
 }
 
 .card-container.columns-3 {
@@ -25,7 +41,7 @@
     display: flex;
 }
 .card-container.columns-4 byu-card{
-    width: 23%;
+    width: 22%;
 }
 @media screen and (max-width: 1023px) {
     .card-container.columns-4 byu-card {
