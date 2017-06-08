@@ -40,9 +40,6 @@ function template_preprocess_views_view_byu_card(&$vars) {
   $options = views_card_d7_get_options($view->style_plugin->options);
 //  $handler = $view->style_plugin;
   $columns  = $options['columns'];
-  $alignment  = $options['alignment'];
-  $border  = $options['border'];
-  $border_radius  = $options['border_radius'];
 
   if (!empty($vars['rows'])) {
 
@@ -51,9 +48,7 @@ function template_preprocess_views_view_byu_card(&$vars) {
       $widthClass = 'columns-' . $columns;
       $vars['card_width'][$i] = $widthClass;
       $vars['cols'][$i] = $columns;
-      $vars['alignment'][$i] = $alignment;
-      $vars['border'][$i] = $border;
-      $vars['border_radius'][$i] = $border_radius;
+
     }
   }
 }
