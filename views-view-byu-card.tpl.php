@@ -12,13 +12,12 @@
  */
 ?>
 <?php if (!empty($title)) : ?>
-  <h3><?php print $title; ?></h3>
+    <h3><?php print $title; ?></h3>
 <?php endif; ?>
 
-<div class="card-container columns-<?php print $cols[$id]; ?> <?php print $alignment[$id]; ?>" >
+<div class="card-container columns-<?php print $cols; ?> <?php print $alignment; ?>" >
     <?php foreach ($rows as $id => $row): ?>
-        <byu-card columns="<?php print $cols[$id]; ?>" class="<?php print $card_width[$id]; ?> border-<?php print $border[$id]; ?> border-<?php print $border_radius[$id]; ?>"><?php print $row; ?></byu-card>
+        <byu-card columns="<?php print $cols; ?>" class="<?php print $card_width; ?> border-<?php print $border; ?> border-<?php print $border_radius; ?>"><?php print $row; ?></byu-card>
     <?php endforeach; ?>
 
 </div>
-
