@@ -32,7 +32,8 @@ function views_card_d7_get_options($array) {
  */
 function template_preprocess_views_view_byu_card(&$vars) {
 
-    drupal_add_js('//cdn.byu.edu/byu-card/latest/byu-card.min.js', 'external');
+    drupal_add_js('//cdn.byu.edu/byu-card/1.x.x/byu-card.min.js', 'external');
+    drupal_css('//cdn.byu.edu/byu-card/1.x.x/byu-card.css', 'external');
 
     $view = $vars['view'];
     $options = views_card_d7_get_options($view->style_plugin->options);
