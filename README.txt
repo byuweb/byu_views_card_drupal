@@ -25,7 +25,7 @@ INSTALLATION
 2. Enable Views and Views BYU Card modules.
 
 3. When editing the view you'd like to use byu card with,
-Change the view display type (i.e. Unformatted List) to 'BYU Feature Card'.
+Change the view display type (i.e. Unformatted List) to 'BYU Card' or 'BYU Feature Card'.
 
 4. While still editing that view, under Fields settings,
 uncheck 'Provide default field wrapper elements' checkbox.
@@ -64,5 +64,11 @@ gray-title|Gray
 
 Setting up your BYU Feature Card view:
 
-1.
+1. Follow the normal steps for a BYU Card, but note that there are additional setting options for the BYU Feature card. When you have selected your view to use the display type 'BYU Feature Card' the settings link will show a set of options.
+
+2. Note that it contains settings for what content to place where in the Feature Card. These regions include "Title" (shown with a colored background on the top of the card), "Feature Top", "Feature Left", "Feature Right", and "Feature Center" (which shows below Feature Left & Feature Right).
+
+These region settings can be empty (set to None) or you can specify your field(s) to go into them. Use ctrl or shift click to add multiple fields to a region. 
+
+3. If you have to fields in a region like Feature Left, note that the order of those two fields is based on the order they are listed in the view. Modify the settings for your fields normally.
 
