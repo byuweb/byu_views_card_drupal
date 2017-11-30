@@ -1,0 +1,57 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-container.align-left {
+    justify-content: flex-start;
+    
+}
+/* defaults to 3 */
+.card-container.align-left byu-feature-card,
+.card-container.align-left.columns-3 byu-feature-card {
+    margin: 15px 1.65%;   
+}
+.card-container.align-left.columns-2 byu-feature-card {
+    margin: 15px 2%;   
+}
+
+.card-container.align-left.columns-4 byu-feature-card {
+    margin: 15px 1.5%;   
+}
+.card-container.columns-2 {
+    display: flex;
+}
+.card-container.columns-2  byu-feature-card{
+    width: 46%;
+}
+
+.card-container.columns-3 {
+    display: flex;
+}
+.card-container.columns-3 byu-feature-card {
+    width: 30%;
+}
+@media screen and (max-width: 1023px) {
+    .card-container.columns-3 byu-feature-card {
+        width: 45%;
+    }
+}
+.card-container.columns-4 {
+    display: flex;
+}
+.card-container.columns-4 byu-feature-card{
+    width: 22%;
+}
+@media screen and (max-width: 1023px) {
+    .card-container.columns-4 byu-feature-card {
+        width: 30%;
+    }
+}
+
+/* for small mobile, always be 100% */
+@media screen and (max-width: 767px) {
+    .card-container byu-feature-card {
+        width: 80% !important;
+    }
+}

@@ -1,0 +1,10 @@
+name = Views Feature Card
+description = A Views style plugin to display a feature card.
+package = BYU
+core = 7.x
+
+dependencies[] = views
+
+stylesheets[all][] = css/style.css
+
+files[] = views_feature_card_d7_plugin_style_byu_feature_card.inc

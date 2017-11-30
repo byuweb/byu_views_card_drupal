@@ -25,7 +25,7 @@ INSTALLATION
 2. Enable Views and Views BYU Card modules.
 
 3. When editing the view you'd like to use byu card with,
-Change the view display type (i.e. Unformatted List) to 'BYU Card'.
+Change the view display type (i.e. Unformatted List) to 'BYU Feature Card'.
 
 4. While still editing that view, under Fields settings,
 uncheck 'Provide default field wrapper elements' checkbox.
@@ -38,3 +38,31 @@ HOW TO USE
 
 After enabling the module, create a new view with the BYU Card display
 format.
+
+
+Creating a color field:
+
+1. From the admin menu, go to Structure -> Content Types -> [Content type of choice] -> Manage Fields
+
+2. Add a new field called "Title Color" (machine name field_title_color) with a Field Type "List (text)"
+   and the widget "Check boxes/radio buttons"
+
+3. Save and, on the new screen, add the following to the Allowed values list:
+navy-title|Navy
+drupal-blue-title|Drupal Blue
+royal-blue-title|Royal Blue
+wordpress-gray-title|WordPress Gray
+dark-gray-title|Dark Gray
+gray-title|Gray
+
+4. Save the field settings and, on the new screen, mark the field as required. You may set a default value if you wish.
+   Allow only one in the Number of values and the values copied above should appear in the the Allowed values list.
+
+5. Save the settings. Now your field is set up. You'll now need to go to the nodes of the content type it's applied to
+   (you can apply it to other content types by typing "Title Color" into Add existing field) and choose a title color.
+
+
+Setting up your BYU Feature Card view:
+
+1.
+
