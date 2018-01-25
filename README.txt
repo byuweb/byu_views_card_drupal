@@ -20,7 +20,7 @@ https://github.com/byuweb/byu-card
 INSTALLATION
 ------------
 
-1. Git clone or Download this module, placing views_card_d7 folder to sites/all/modules
+1. Git clone or Download this module, placing byu_views_card folder to sites/all/modules
 
 2. Enable Views and Views BYU Card modules.
 

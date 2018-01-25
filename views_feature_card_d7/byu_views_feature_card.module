@@ -3,19 +3,19 @@
 /**
  * Implements of hook_views_api().
  */
-function views_feature_card_d7_views_api() {
+function byu_views_feature_card_views_api() {
   return array(
     'api' => '3.0-alpha1',
-    'path' => drupal_get_path('module', 'views_feature_card_d7'),
+    'path' => drupal_get_path('module', 'byu_views_feature_card'),
   );
 }
 
 /**
  * Implements of hook_theme().
  */
-function views_feature_card_d7_theme($existing, $type, $theme, $path) {
+function byu_views_feature_card_theme($existing, $type, $theme, $path) {
   return array(
-    'views_feature_card_d7' => array(
+    'byu_views_feature_card' => array(
       'variables' => array(
         'view' => NULL,
         'options' => array(),
@@ -23,7 +23,7 @@ function views_feature_card_d7_theme($existing, $type, $theme, $path) {
         'title' => NULL,
       ),
     ),
-    'views_feature_card_d7_inner' => array(
+    'byu_views_feature_card_inner' => array(
 
       'variables' => array(
         'view' => NULL,
@@ -46,7 +46,7 @@ function views_feature_card_d7_theme($existing, $type, $theme, $path) {
  * @ingroup themeable
  * @link http://drupal.org/node/355919
  */
-function theme_views_feature_card_d7($variables) {
+function theme_byu_views_feature_card($variables) {
   $view = $variables['view'];
   $options = $variables['options'];
   $rows = $variables['rows'];
@@ -102,30 +102,30 @@ function theme_views_feature_card_d7($variables) {
   // vastly simplifies the code that follows.  This particular magic
   // incantation extracts the value from each record for the appropriate field
   // specified by the user.  It then normalizes that value down to just an int,
-  // even though in some cases it is an array.  See views_feature_card_d7_normalize_key().
+  // even though in some cases it is an array.  See byu_views_feature_card_normalize_key().
   // Finally, we build up a list of all main keys in the result set so that
   // we can normalize top-level records below.
 //  foreach ($result as $i => $record) {
-//      $result[$i]->views_feature_card_d7_left = views_feature_card_d7_normalize_key($fields[$options['feature_left']]->get_value($record), $fields[$options['feature_left']]);
-//      $result[$i]->views_feature_card_d7_right = views_feature_card_d7_normalize_key($fields[$options['feature_right']]->get_value($record), $fields[$options['feature_right']]);
-//      $result[$i]->views_feature_card_d7_center = views_feature_card_d7_normalize_key($fields[$options['feature_center']]->get_value($record), $fields[$options['feature_center']]);
+//      $result[$i]->byu_views_feature_card_left = byu_views_feature_card_normalize_key($fields[$options['feature_left']]->get_value($record), $fields[$options['feature_left']]);
+//      $result[$i]->byu_views_feature_card_right = byu_views_feature_card_normalize_key($fields[$options['feature_right']]->get_value($record), $fields[$options['feature_right']]);
+//      $result[$i]->byu_views_feature_card_center = byu_views_feature_card_normalize_key($fields[$options['feature_center']]->get_value($record), $fields[$options['feature_center']]);
 
-//    $result[$i]->views_feature_card_d7_main = views_feature_card_d7_normalize_key($fields[$options['main_field']]->get_value($record), $fields[$options['main_field']]);
-//    $result[$i]->views_feature_card_d7_parent = views_feature_card_d7_normalize_key($fields[$options['parent_field']]->get_value($record), $fields[$options['parent_field']]);
+//    $result[$i]->byu_views_feature_card_main = byu_views_feature_card_normalize_key($fields[$options['main_field']]->get_value($record), $fields[$options['main_field']]);
+//    $result[$i]->byu_views_feature_card_parent = byu_views_feature_card_normalize_key($fields[$options['parent_field']]->get_value($record), $fields[$options['parent_field']]);
 //
-//    $parents[] = $record->views_feature_card_d7_main;
+//    $parents[] = $record->byu_views_feature_card_main;
   }
 
   // Normalize the top level of records to all point to 0 as their parent
   // We only have to do this once, so we do it here in the wrapping function.
 //  foreach ($result as $i => $record) {
-//    if (! in_array($record->views_feature_card_d7_parent, $parents)) {
-//      $result[$i]->views_feature_card_d7_parent = 0;
+//    if (! in_array($record->byu_views_feature_card_parent, $parents)) {
+//      $result[$i]->byu_views_feature_card_parent = 0;
 //    }
 //  }
 
   // Recursively render each item.
-//  $feature = theme('views_feature_card_d7_inner', array(
+//  $feature = theme('byu_views_feature_card_inner', array(
 //    'view' => $view,
 //    'options' => $options,
 //    'rows' => $rows,
@@ -151,7 +151,7 @@ function theme_views_feature_card_d7($variables) {
  * @param $parent
  *   The id of the parent entry in the call stack.
  */
-//function theme_views_feature_card_d7_inner($variables) {
+//function theme_byu_views_feature_card_inner($variables) {
 //  $view = $variables['view'];
 //  $options = $variables['options'];
 //  $rows = $variables['rows'];
@@ -161,8 +161,8 @@ function theme_views_feature_card_d7($variables) {
 //
 //  $items = array();
 //  foreach ($result as $i => $record) {
-//    if ($record->views_feature_card_d7_parent == $parent) {
-//      $variables['parent'] = $record->views_feature_card_d7_main;
+//    if ($record->byu_views_feature_card_parent == $parent) {
+//      $variables['parent'] = $record->byu_views_feature_card_main;
 //      $items[] = $rows[$i] . call_user_func(__FUNCTION__, $variables);
 //    }
 //  }
@@ -187,7 +187,7 @@ function theme_views_feature_card_d7($variables) {
  * @return int
  *   The value of this key, normalized to an int.
  */
-//function views_feature_card_d7_normalize_key($value, views_handler_field $field) {
+//function byu_views_feature_card_normalize_key($value, views_handler_field $field) {
 //  if (is_array($value) && count($value)) {
 //    if (isset($field->field_info['columns'])) {
 //      $columns = array_keys($field->field_info['columns']);
@@ -221,7 +221,7 @@ function template_preprocess_views_view_byu_feature_card(&$variables) {
 
     $view = $variables['view'];
     $rows = $variables['rows'];
-//    $options = views_feature_card_d7_get_options($view->style_plugin->options);
+//    $options = byu_views_feature_card_get_options($view->style_plugin->options);
     $options = $view->style_options;
 //    dpm($options);
 //    print_r($variables);
@@ -274,14 +274,14 @@ function template_preprocess_views_view_byu_feature_card(&$variables) {
 /**
  * Set default options.
  */
-function views_feature_card_d7_get_options($array) {
+function byu_views_feature_card_get_options($array) {
     $options = array();
     foreach ($array as $key => $value) {
         if (!is_array($value)) {
             $options[$key] = $value;
         }
         else {
-            $options = array_merge($options, views_feature_card_d7_get_options($value));
+            $options = array_merge($options, byu_views_feature_card_get_options($value));
         }
     }
     return $options;

@@ -9,7 +9,7 @@
  *
  * @ingroup views_style_plugins
  */
-class views_card_d7_plugin_style_byu_card extends views_plugin_style {
+class byu_views_card_plugin_style_byu_card extends views_plugin_style {
     /**
      * Set default options.
      */
@@ -27,7 +27,7 @@ class views_card_d7_plugin_style_byu_card extends views_plugin_style {
         parent::options_form($form, $form_state);
 
         // Flatten options to deal with the various hierarchy changes.
-        $options = views_card_d7_get_options($this->options);
+        $options = byu_views_card_get_options($this->options);
 
         $form['columns'] = array(
             '#type' => 'select',

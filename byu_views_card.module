@@ -7,21 +7,21 @@
 /**
  * Implements hook_views_api().
  */
-function views_card_d7_views_api() {
+function byu_views_card_views_api() {
     return array('api' => '3.0');
 }
 
 /**
  * Set default options.
  */
-function views_card_d7_get_options($array) {
+function byu_views_card_get_options($array) {
     $options = array();
     foreach ($array as $key => $value) {
         if (!is_array($value)) {
             $options[$key] = $value;
         }
         else {
-            $options = array_merge($options, views_card_d7_get_options($value));
+            $options = array_merge($options, byu_views_card_get_options($value));
         }
     }
     return $options;
@@ -36,7 +36,7 @@ function template_preprocess_views_view_byu_card(&$vars) {
     drupal_add_css('//cdn.byu.edu/byu-card/1.x.x/byu-card.css', 'external');
 
     $view = $vars['view'];
-    $options = views_card_d7_get_options($view->style_plugin->options);
+    $options = byu_views_card_get_options($view->style_plugin->options);
     $columns  = $options['columns'];
     $alignment = (isset($options['alignment']) ? $options['alignment'] : 'center');
     $border = (isset($options['border']) ? $options['border'] : 'none');

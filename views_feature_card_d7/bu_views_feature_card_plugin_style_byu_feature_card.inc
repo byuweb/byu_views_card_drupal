@@ -10,7 +10,7 @@
  *
  * @ingroup views_style_plugins
  */
-class views_feature_card_d7_plugin_style_byu_feature_card extends views_plugin_style_list {
+class byu_views_feature_card_plugin_style_byu_feature_card extends views_plugin_style_list {
 
   /**
    * Set default options
