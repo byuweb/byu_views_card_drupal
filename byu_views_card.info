@@ -9,9 +9,3 @@ stylesheets[all][] = css/style.css
 
 files[] = byu_views_card_plugin_style_byu_card.inc
 
-; Information added by drupal.org packaging script on 2013-04-05
-version = "7.x-1.3"
-core = "7.x"
-project = "byu_views_card"
-datestamp = "1365191423"
-
