@@ -1,7 +1,7 @@
 name = Views BYU Card
 description = Views plugin for displaying views content in a BYU Card format.
 core = 7.x
-package = BYU Custom
+package = BYU
 
 dependencies[] = views
 
