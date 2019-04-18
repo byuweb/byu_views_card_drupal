@@ -33,10 +33,6 @@ class viewCardD8 extends StylePluginBase {
 		return $options;
 	}
 
-//	protected function setOptionDefaults(array &$storage, array $opts) {
-//
-//    }
-
 	//render the given style
 	
 	public function buildOptionsForm(&$form, FormStateInterface $form_state) {
