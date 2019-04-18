@@ -4,26 +4,44 @@
 
 //Style plugin to render each item in a BYU card.
 
-namespace BYU\viewCardD8\Plugin\views\style;
+namespace Drupal\byu_views_card\Plugin\views\style;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\style\StylePluginBase;
 
+/**
+ *
+ * @ingroup views_style_plugins
+ *
+ * @ViewsStyle(
+ *     id = "byu_card",
+ *     title = @Translation("BYU Card"),
+ *     help = @Translation("Renders content in a BYU Card style."),
+ *     theme = "views_view_viewCardD8",
+ *     display_types = { "normal" }
+ * )
+ */
+
 class viewCardD8 extends StylePluginBase {
-	//set default options.
-	function defineOptions() {
+
+    //set default options.
+    protected function defineOptions() {
 		$options = parent::defineOptions();
 		$options['columns'] = array('default' => '3');
 		return $options;
 	}
-	
+
+//	protected function setOptionDefaults(array &$storage, array $opts) {
+//
+//    }
+
 	//render the given style
 	
-	function buildOptionsForm(&$form, &$form_state) {
+	public function buildOptionsForm(&$form, FormStateInterface $form_state) {
 		parent::buildOptionsForm($form, $form_state);
 		//Flatten options to deal with the various hierarchy changes.
 		$options = viewCardD8_get_options($this->options);
-		
+
 		$form['columns'] = array(
 			'#type' => 'select',
 			'#title' => t('Number of tiles in each row'),
@@ -59,7 +77,7 @@ class viewCardD8 extends StylePluginBase {
 			),
 		);
 		
-		$form ['border_radius'] = array(
+		$form['border_radius'] = array(
 			'#type' => 'select',
 			'#title' => t('Border Radius'),
 			'#default_value' => $options['border_radius'],

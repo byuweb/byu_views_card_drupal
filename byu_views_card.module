@@ -2,15 +2,18 @@
 
 //module help and theme functions
 
-\Drupal::moduleHandler()->loadInclude('viewCardD8', 'inc', 'viewCardD8.theme');
+\Drupal::moduleHandler()->loadInclude('byu_views_card', 'inc', 'byu_views_card.theme');
+
+function byu_views_card_preprocess_views_view(&$variables) {
+    $variables['#attached']['library'][] = 'byu_views_card/byu-card';
+}
 
 //Implements Hook Theme
 
-function viewCardD8($existing, $type, $theme, $path) {
+function byu_views_card_theme($existing, $type, $theme, $path) {
 	return array (
-		'viewCardD8' => array(
-			'file' => 'viewCardD8.theme.inc'
+		'byu_card' => array(
+			'file' => 'byu_views_card.theme.inc'
 		),
-	
 	);
 }

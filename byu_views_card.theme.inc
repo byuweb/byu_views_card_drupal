@@ -23,19 +23,17 @@ function viewCardD8_get_options($array) {
 /**
  * Display a view as a byu card style.
  */
-function template_preprocess_views_view_byu_card(&$vars) {
-
-//    drupal_add_js('//cdn.byu.edu/byu-card/latest/byu-card.min.js', 'external');
+function template_preprocess_views_view_viewCardD8(&$vars) {
 
     $view = $vars['view'];
     $options = viewCardD8_get_options($view->style_plugin->options);
     $columns  = $options['columns'];
     $alignment = (isset($options['alignment']) ? $options['alignment'] : 'center');
     $border = (isset($options['border']) ? $options['border'] : 'none');
-
     $border_radius = (isset($options['border_radius']) ? $options['border_radius'] : 'none');
 
     if (!empty($vars['rows'])) {
+//        kint($view);
         $vars['card_width'] = array();
         $widthClass = 'columns-' . $columns;
         $vars['card_width'] = $widthClass;
@@ -43,7 +41,9 @@ function template_preprocess_views_view_byu_card(&$vars) {
         $vars['alignment'] = $alignment;
         $vars['border'] = $border;
         $vars['border_radius'] = $border_radius;
-        foreach ($vars['rows'] as $i => $row) {
+        $vars['nodes'] = [];
+        foreach ($vars['rows'] as $row) {
+//            kint($row->_entity);
         }
     }
 }
