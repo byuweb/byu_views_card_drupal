@@ -24,6 +24,8 @@ use Drupal\views\Plugin\views\style\StylePluginBase;
 
 class viewCardD8 extends StylePluginBase {
 
+    protected $usesRowPlugin = TRUE;
+
     //set default options.
     protected function defineOptions() {
 		$options = parent::defineOptions();

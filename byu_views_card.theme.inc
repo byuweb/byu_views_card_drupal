@@ -33,7 +33,6 @@ function template_preprocess_views_view_viewCardD8(&$vars) {
     $border_radius = (isset($options['border_radius']) ? $options['border_radius'] : 'none');
 
     if (!empty($vars['rows'])) {
-//        kint($view);
         $vars['card_width'] = array();
         $widthClass = 'columns-' . $columns;
         $vars['card_width'] = $widthClass;
@@ -41,9 +40,8 @@ function template_preprocess_views_view_viewCardD8(&$vars) {
         $vars['alignment'] = $alignment;
         $vars['border'] = $border;
         $vars['border_radius'] = $border_radius;
-        $vars['nodes'] = [];
-        foreach ($vars['rows'] as $row) {
-//            kint($row->_entity);
+        foreach ($vars['rows'] as $id => $row) {
+            $vars['rows'][$id]['content'] = $row;
         }
     }
 }
